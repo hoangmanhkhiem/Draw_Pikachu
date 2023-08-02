@@ -79,29 +79,29 @@ class Pikachu:
         l2 = []
         t.seth(190)
         a = 0.7
-        for i in range(28):
+        for _ in range(28):
             a += 0.1
             t.right(3)
             t.fd(a)
             l1.append(t.position())
-        
+
         self.noTrace_goto(x, y)
-        
+
         t.seth(10)
         a = 0.7
-        for i in range(28):
+        for _ in range(28):
             a += 0.1
             t.left(3)
             t.fd(a)
             l2.append(t.position())
-        
+
         # 上嘴唇
-        
+
         t.seth(10)
         t.circle(50, 15)
         t.left(180)
         t.circle(-50, 15)
-        
+
         t.circle(-50, 40)
         t.seth(233)
         t.circle(-50, 55)
@@ -139,14 +139,12 @@ class Pikachu:
         t.begin_fill()
         a = 2.3
         for i in range(120):
+            t.lt(3)
             if 0 <= i < 30 or 60 <= i < 90:
                 a -= 0.05
-                t.lt(3)
-                t.fd(a)
             else:
                 a += 0.05
-                t.lt(3)
-                t.fd(a)
+            t.fd(a)
         t.end_fill()
         tracer(True)
 
@@ -159,14 +157,12 @@ class Pikachu:
         t.begin_fill()
         a = 2.3
         for i in range(120):
+            t.lt(3)
             if 0 <= i < 30 or 60 <= i < 90:
                 a -= 0.05
-                t.lt(3)
-                t.fd(a)
             else:
                 a += 0.05
-                t.lt(3)
-                t.fd(a)
+            t.fd(a)
         t.end_fill()
         tracer(True)
 
